@@ -1,0 +1,9 @@
+.send-button {
+  position: absolute;
+  right: 140px;
+  color: white;
+}
+
+.send-button:hover{
+  color: white;
+}

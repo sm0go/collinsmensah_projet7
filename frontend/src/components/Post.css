@@ -1,0 +1,21 @@
+a {
+  text-decoration: none !important;
+  color: black; 
+}
+
+a:hover {
+  color: black;
+}
+
+.text-shrink {
+  /* white-space: nowrap; */
+  overflow: hidden;
+  height: 100px;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.testt {
+  white-space: nowrap;
+  overflow: hidden;
+}

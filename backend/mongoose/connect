@@ -1,0 +1,21 @@
+require('dotenv').config()
+const mongoose = require('mongoose')
+
+const MDB_ID = process.env.MDB_ID
+const MDB_PASSWORD = process.env.MDB_PASSWORD
+const MDB_CLUSTER = process.env.MDB_CLUSTER
+const MDB_DATABASE = process.env.MDB_DATABASE
+
+const connectionOptions = {
+  dbName: MDB_DATABASE,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}
+const connectionUri = `mongodb+srv://${MDB_ID}:${MDB_PASSWORD}@${MDB_CLUSTER}`
+ 
+mongoose.connect(connectionUri, connectionOptions)
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch(() => console.log('Connexion à MongoDB échouée !'));
+
+module.exports = mongoose
+  
